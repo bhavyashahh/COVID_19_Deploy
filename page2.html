@@ -1,0 +1,46 @@
+<html>
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+
+
+function displayRadioValue() { 
+            var ele = document.URL.indexOf('?'); 
+       
+            for(i = 0; i < ele.length; i++) { 
+                  
+                if(ele[i].type="radio") { 
+                  
+                    if(ele[i].checked) 
+                        document.getElementById("result").innerHTML 
+                                += ele[i].name + " Value: " 
+                                + ele[i].value + "<br>"; 
+                } 
+            } 
+        } 
+
+
+
+
+
+params = getParams();
+firstname = unescape(params["fname"]);
+lastname = unescape(params["lname"]);
+age = unescape(params["age"]);
+image = unescape(params["img"]);
+document.write("firstname = " + firstname + "<br>");
+document.write("lastname = " + lastname + "<br>");
+document.write("age = " + age + "<br>");
+
+</script>
+</html
