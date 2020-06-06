@@ -3,24 +3,24 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import cv2
-import tensorflow as tf
+#import tensorflow as tf
 import os
 import importlib
-from tensorflow.keras.layers import Input
+#from tensorflow.keras.layers import Input
 #from tensorflow.keras.layers.core import Dense
-from tensorflow.keras.models import Model
+#from tensorflow.keras.models import Model
 #import keras
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import cv2
 import numpy
-from tensorflow.keras import backend as K
+from keras import backend as K
 import os
-from tensorflow.python.keras.backend import set_session
-from tensorflow.python.keras.models import load_model
-import tensorflow
+#from tensorflow.python.keras.backend import set_session
+#from tensorflow.python.keras.models import load_model
+#import tensorflow
 
 
-tf.compat.v1.disable_eager_execution()
+#tf.compat.v1.disable_eager_execution()
 	
 #config = tf.ConfigProto(
    # device_count={'CPU': 1},
@@ -56,7 +56,7 @@ def home():
 #with graph.as_default():
 def about():
 	#K.clear_session()	
-	model= tf.keras.models.load_model(r'acc_65')
+	model= load_model(r'acc_65')
 	fname=request.form['fname']
 	lname=request.form['lname']
 	age=request.form['age']
