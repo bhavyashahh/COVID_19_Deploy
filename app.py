@@ -56,7 +56,7 @@ def home():
 #with graph.as_default():
 def about():
 	#K.clear_session()	
-	model= tf.keras.models.load_model(r'/home/bhavyashah/Desktop/corona_deploy/acc_65')
+	model= tf.keras.models.load_model(r'acc_65')
 	fname=request.form['fname']
 	lname=request.form['lname']
 	age=request.form['age']
