@@ -5,4 +5,4 @@ opencv-python>=4.0.0
 pandas>=0.19
 matplotlib>=1.4.3
 keras==2.3.1
-tensorflow==1.15.0
+tensorflow==2.5.1
